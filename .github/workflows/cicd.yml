@@ -40,6 +40,7 @@ jobs:
     #   env:
     #     SONAR_TOKEN: "squ_dabc0b6f0cc10dcd01a1dd73852b316af1932ada"
     #     SONAR_HOST_URL: "http://35.232.150.196:9000"
+    
 
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v3
