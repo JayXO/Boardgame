@@ -30,7 +30,7 @@ jobs:
       uses: sonarsource/sonarqube-scan-action@master
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+        SONAR_HOST_URL: http://35.232.150.196:9000
 
     - name: SonarQube Quality Gate check
       id: sonarqube-quality-gate-check
