@@ -64,4 +64,4 @@ jobs:
 
     - name: Push Docker Image
       run: |
-          docker push JayXo/boardgame:latest
+          docker push jayzende/boardgame:latest
