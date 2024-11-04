@@ -50,7 +50,7 @@ jobs:
 
     - name: Build Docker Image
       run: |
-        docker build -t JayXO/boardgame:latest .
+        docker build -t jayzende/boardgame:latest .
 
     - name: Trivy Image Scan
       run: |
