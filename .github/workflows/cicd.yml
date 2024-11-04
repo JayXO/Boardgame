@@ -26,11 +26,11 @@ jobs:
       run: |
         trivy fs --format table -o fs.html .
 
-    - name: SonarQube Scan
-      uses: sonarsource/sonarqube-scan-action@master
-      env:
-        SONAR_TOKEN: "squ_dabc0b6f0cc10dcd01a1dd73852b316af1932ada"
-        SONAR_HOST_URL: "http://35.232.150.196:9000"
+    # - name: SonarQube Scan
+    #   uses: sonarsource/sonarqube-scan-action@master
+    #   env:
+    #     SONAR_TOKEN: "squ_dabc0b6f0cc10dcd01a1dd73852b316af1932ada"
+    #     SONAR_HOST_URL: "http://35.232.150.196:9000"
 
     - name: SonarQube Quality Gate check
       id: sonarqube-quality-gate-check
@@ -38,8 +38,8 @@ jobs:
       # Force to fail step after specific time.
       timeout-minutes: 5
       env:
-       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-       SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+        SONAR_TOKEN: "squ_dabc0b6f0cc10dcd01a1dd73852b316af1932ada"
+        SONAR_HOST_URL: "http://35.232.150.196:9000"
 
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v3
