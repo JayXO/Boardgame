@@ -29,8 +29,8 @@ jobs:
     - name: SonarQube Scan
       uses: sonarsource/sonarqube-scan-action@master
       env:
-        SONAR_TOKEN: squ_dabc0b6f0cc10dcd01a1dd73852b316af1932ada
-        SONAR_HOST_URL: http://35.232.150.196:9000
+        SONAR_TOKEN: "squ_dabc0b6f0cc10dcd01a1dd73852b316af1932ada"
+        SONAR_HOST_URL: "http://35.232.150.196:9000"
 
     - name: SonarQube Quality Gate check
       id: sonarqube-quality-gate-check
