@@ -43,8 +43,12 @@ jobs:
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         SONAR_HOST_URL: http://34.28.228.151:9000
-    
 
+    - name: Display SonarQube Analysis Report URL
+      run: |
+          echo "SonarQube analysis complete. Visit the dashboard to review the results:"
+          echo "http://34.28.228.151:9000/dashboard?id=Boardgame"
+  
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v3
 
